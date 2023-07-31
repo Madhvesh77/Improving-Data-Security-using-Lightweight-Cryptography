@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <style>
+        body{
+                background-image: url("/static/images/background.jpg");
+                background-size: cover;
+                font-family: "Fira Code", monospace;
+                color: #7fff00;
+            }
+    </style>
+</head>
+<body>
+    {% if option == 'text' %}
+        <style>
+        
+            /* Style for the form */
+            form {
+            
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            }
+        
+            /* Style for the input field */
+            input[type="text"] {
+            padding: 10px;
+            background-color: #001f3f;
+            width: 100%;
+            color:#2bff00;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 3px solid #2bff00;
+            
+            }
+        
+            /* Style for the submit button */
+            input[type="submit"] {
+            background-color: #7fff00;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            }
+        
+            /* Hover effect for the submit button */
+            input[type="submit"]:hover {
+            background: #7fff00;
+            }
+        
+            /* Center align text in the form */
+            label {
+            display: block;
+            margin-bottom: 10px;
+            }
+        
+            /* Style for the form label */
+            span {
+            font-weight: bold;
+            }
+            .heading1{
+                font-family: "Fira Code", monospace;
+                color: #7fff00;
+            }
+        </style>
+        </head>
+        <body>
+        <div>
+            <h1 class="heading1">Improving Data Security using Lightweight Cryptography</h1>
+            <form action="inputed/">
+            <label>
+                <span>Enter the plaintext:</span>
+                <input type="text" name="plain" id="plain" required>
+            </label>
+            <input type="submit" value="Submit">
+            </form>
+        </div>
+        </body>
+    {% else %}
+        <style>
+            /* Center the content */
+            body {
+                background-image: url("/static/images/background.gif");
+                background-size: cover;
+            }
+        
+            /* Style for the form */
+            form {
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            }
+        
+            /* Style for the input field */
+            input[type="text"] {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+            border: none;
+            box-sizing: border-box;
+            border: 3px solid #7fff00;
+            }
+        
+            /* Style for the submit button */
+            input[type="file"] {
+            background: #001f3f;
+            color: #7fff00;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            }
+        
+            /* Hover effect for the submit button */
+            input[type="file"]:hover {
+            background: #7fff00;
+            color: black;
+            }
+
+            input[type="submit"] {
+            background: #001f3f;
+            color: #7fff00;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            }
+        
+            /* Hover effect for the submit button */
+            input[type="submit"]:hover {
+            background: #7fff00;
+            color: black;
+            }
+        
+            /* Center align text in the form */
+            label {
+            display: block;
+            margin-bottom: 10px;
+            font-family: "Fira Code", monospace;
+            color: #7fff00;
+            font: bolder;
+            }
+        
+            /* Style for the form label */
+            span {
+            font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+
+        <form action="inputed/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="file">
+            <br><br>
+            <input type="submit" value="Upload">
+        </form>
+    </body>
+    {% endif %}
+    <br>
+</body>
+</html>

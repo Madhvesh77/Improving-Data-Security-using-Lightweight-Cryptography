@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load static %}
+    <style>
+      /* Center the content */
+      body {
+        background-image: url("/static/images/background.gif");
+        background-size: cover;
+      }
+
+      /* Add animation to the background */
+      @keyframes gradientAnim {
+        0% {
+          background: linear-gradient(to bottom right, #ffd700, #001f3f);
+        }
+        50% {
+          background: linear-gradient(to bottom right, #001f3f, #ffd700);
+        }
+        100% {
+          background: linear-gradient(to bottom right, #ffd700, #001f3f);
+        }
+      }
+      .h {
+        font-family: "Fira Code", monospace;
+        color: #7fff00;
+        text-align: center;
+      }
+      /* Style for the form */
+
+      /* Style for the input field */
+      input[type="text"] {
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+      }
+
+      /* Style for the submit button */
+      input[type="submit"] {
+        background: #001f3f;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      /* Hover effect for the submit button */
+      input[type="submit"]:hover {
+        background: #ffd700;
+      }
+
+      /* Center align text in the form */
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      /* Style for the form label */
+      span {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="h" action="">
+      <h1>Successfully encrypted!</h1>
+      <br /><br />
+      <h2>Plaintext: {{ plaintext }}</h2>
+      <br />
+      <h2>Random cipher key taken : {{ Randomkey }}</h2>
+      <br />
+      <h2>Encryption key: {{ x1 }}</h2>
+      <br />
+      <h2>Cipher text: {{ Cipher }}</h2>
+      <br />
+    </form>
+  </body>
+</html>

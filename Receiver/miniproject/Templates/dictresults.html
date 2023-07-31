@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load static %}
+    <style>
+      body {
+        background-image: url("/static/images/background.jpg");
+        background-size: cover;
+        font-family: "Fira Code", monospace;
+        color: #7fff00;
+      }
+      input[type="submit"]:hover {
+        background: black;
+        color: #7fff00;
+      }
+      input[type="submit"] {
+        background: #7fff00;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      {% if status == 1 %}
+      <h1>Congratulations! Your dictionary has the original key.</h1>
+      <br />
+      <h1>The Original key: {{ rightkey }}</h1>
+      <br />
+      {% if type == 'text' %}
+      <h1>The plaintext obtained using the key is: {{ plain }}</h1>
+      <br />
+      {% elif type == 'image' %}
+      <img
+        src="/static/images/Decryptedimage.jpg"
+        alt="Decrypted_image_using_dictionary_keys"
+        width="200"
+        height="150"
+      />
+      {% endif %}
+      <br /><br /><br />
+      <h1>Failed keys</h1>
+      <br />
+      {% for line in wrongkeys %} {{ line }} - Failed <br />
+      {% endfor %} {% elif status == 0 %}
+      <h1>Unfortunately the dictionary does not contain the correct key.</h1>
+      <br />
+      <h1>Failed keys</h1>
+      <br />
+      {% for line in wrongkeys %} {{ line }} - Failed <br />
+      {% endfor %} {% endif %}
+    </center>
+  </body>
+</html>

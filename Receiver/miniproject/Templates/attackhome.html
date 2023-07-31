@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load static %}
+    <style>
+      body {
+        background-image: url("/static/images/background.jpg");
+        background-size: cover;
+        font-family: "Fira Code", monospace;
+        color: #7fff00;
+      }
+      input[type="submit"] {
+        background: #7fff00;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      input[type="submit"]:hover {
+        background: black;
+        color: #7fff00;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <form action="dictionary/">
+        <center>
+          <h1>What kind of attack do you want to carry out?</h1>
+          <br />
+          <label for="dict" id="dict" name="dict">Dictionary Attack : </label>
+          <input type="submit" value="Attack" />
+        </center>
+      </form>
+      <br /><br />
+      <form action="bitflip/">
+        <center>
+          <label for="bit" id="bit" name="bit">Bit-Flipping attack : </label>
+          <input type="submit" value="Attack" />
+        </center>
+      </form>
+    </center>
+  </body>
+</html>

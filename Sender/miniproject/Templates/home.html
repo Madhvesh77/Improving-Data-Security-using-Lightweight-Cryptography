@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sender Interface</title>
+    <style>
+      /* Center the content */
+      body {
+        background-image: url("/static/images/background.gif");
+        background-size: cover;
+      }
+
+      /* Add animation to the background */
+      
+
+      /* Style for the form */
+      form {
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        font-family: "Fira Code", monospace;
+        color: #7fff00;
+      }
+
+      /* Style for the input field */
+      input[type="text"] {
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+      }
+
+      /* Style for the submit button */
+      input[type="submit"] {
+        background: #7fff00;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      /* Hover effect for the submit button */
+      input[type="submit"]:hover {
+        background: black;
+        color: #7fff00;
+      }
+
+      /* Center align text in the form */
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      /* Style for the form label */
+      span {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="encrypted/">
+        <center>
+          <h1>Improving data security using lightweight cryptography</h1>
+          <h2>What type of plaintext do you want to encrypt?</h2>
+          <input type="radio" id="image" name="plaintext" value="image" />
+          <label for="image">Image</label>
+          <input type="radio" id="text" name="plaintext" value="text" />
+          <label for="text">Text</label>
+          <input type="radio" id="File" name="plaintext" value="File" />
+          <label for="File">File</label>
+          <br />
+          <input type="submit" value="Submit" />
+        </center>
+      </form>
+    </div>
+  </body>
+</html>
