@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load static %}
+    <style>
+      body {
+        background-image: url("/static/images/background.jpg");
+        background-size: cover;
+      }
+      .h {
+        font-family: "Fira Code", monospace;
+        color: #7fff00;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="h" action="">
+      <h1>Position changed</h1>
+      {{ pos }}
+      <h1>Original ciphertext:</h1>
+      {{ octext }}
+      <h1>Original plaintext:</h1>
+      {{ optext }}
+      <h1>Modified ciphertext:</h1>
+      {{ fctext }}
+      <h1>Modified plaintext:</h1>
+      {{ fptext }}
+      <h1>Changes in plaintext observed:</h1>
+      {{ changes }}
+      <h1>Percent of changes in the plaintext:</h1>
+      {{ percent }} %
+    </form>
+  </body>
+</html>
